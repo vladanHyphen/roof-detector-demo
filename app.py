@@ -1,6 +1,6 @@
 import streamlit as st
-opencv-python-headless
-numpy
-pandas
-Pillow
-xlsxwriter
+import cv2
+import numpy as np
+import pandas as pd
+from PIL import Image
+import io
