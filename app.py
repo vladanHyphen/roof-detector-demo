@@ -1,4 +1,4 @@
-streamlit
+import streamlit as st
 opencv-python-headless
 numpy
 pandas
