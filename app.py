@@ -21,7 +21,7 @@ uploaded_file = st.file_uploader(
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
     img_rgb = np.array(image.convert('RGB'))
-    st.image(img_rgb, caption="Uploaded image", use_column_width=True)
+    st.image(img_rgb, caption="Uploaded image", use_container_width=True)
 
     # --- HSV mask for gray-like roofs ---
     hsv = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2HSV)
@@ -71,7 +71,7 @@ if uploaded_file is not None:
         cv2.LINE_AA
     )
 
-    st.image(overlay_result, caption="Detected dwellings (green dots)", use_column_width=True)
+    st.image(overlay_result, caption="Detected dwellings (green dots)", use_container_width=True)
 
     # --- Prepare Excel file for download ---
     df = pd.DataFrame([
@@ -89,4 +89,5 @@ if uploaded_file is not None:
         file_name="roof_centroids.xlsx",
         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     )
+
 
