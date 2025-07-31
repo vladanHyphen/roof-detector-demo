@@ -1,6 +1,9 @@
 streamlit
-opencv-python-headless
 numpy
 pandas
-Pillow
+pillow
+opencv-python
+requests
+mercantile
+pyproj
 xlsxwriter
